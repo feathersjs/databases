@@ -2,9 +2,9 @@
   "name": "feathers-memory",
   "description": "An in memory service store",
   "version": "4.1.0",
-  "homepage": "https://github.com/feathersjs-ecosystem/feathers-memory",
-  "main": "lib/index",
-  "types": "types",
+  "homepage": "https://github.com/feathersjs/databases",
+  "main": "lib/",
+  "types": "lib/",
   "keywords": [
     "feathers",
     "feathers-plugin"
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feathersjs-ecosystem/feathers-memory.git"
+    "url": "git://github.com/feathersjs/databases.git"
   },
   "author": {
     "name": "Feathers contributors",
@@ -21,64 +21,33 @@
   },
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/feathersjs-ecosystem/feathers-memory/issues"
+    "url": "https://github.com/feathersjs/databases/issues"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 12"
   },
   "scripts": {
-    "add-dist": "npm run clean && npm run build && git add dist/ --force && git commit -am \"Updating dist\"",
-    "clean": "shx rm -rf dist/ && shx mkdir -p dist",
-    "build": "npm run clean && npm run webpack && npm run webpack:production",
-    "webpack": "webpack",
-    "webpack:production": "NODE_ENV=production webpack",
-    "publish": "git push origin --tags && npm run changelog && git push origin",
-    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
-    "release:patch": "npm run add-dist && npm version patch && npm publish",
-    "release:minor": "npm run add-dist && npm version minor && npm publish",
-    "release:major": "npm run add-dist && npm version major && npm publish",
-    "lint": "semistandard --fix",
-    "mocha": "mocha --opts mocha.opts",
-    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
-    "dtslint": "dtslint types",
-    "test": "npm run dtslint && npm run lint && npm run coverage"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "IE 10"
-  ],
-  "semistandard": {
-    "env": [
-      "mocha"
-    ]
+    "prepublish": "npm run compile",
+    "compile": "shx rm -rf lib/ && tsc",
+    "test": "npm run compile && npm run mocha",
+    "mocha": "mocha --config ../../.mocharc.json --recursive test/**.test.ts test/**/*.test.ts"
   },
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
-    "@feathersjs/adapter-commons": "^4.3.6",
-    "@feathersjs/commons": "^4.3.0",
-    "@feathersjs/errors": "^4.3.4",
-    "sift": "^8.5.0"
+    "@feathersjs/adapter-commons": "^4.5.2",
+    "@feathersjs/commons": "^4.5.2",
+    "@feathersjs/errors": "^4.5.2",
+    "sift": "^12.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@feathersjs/adapter-tests": "^4.3.4",
-    "@feathersjs/express": "^4.3.5",
-    "@feathersjs/feathers": "^4.3.4",
-    "@feathersjs/socketio": "^4.3.5",
-    "@types/node": "^12.7.11",
-    "babel-loader": "^8.0.6",
-    "body-parser": "^1.19.0",
-    "dtslint": "^0.9.8",
-    "istanbul": "^1.1.0-alpha.1",
-    "mocha": "^6.2.1",
-    "semistandard": "^14.2.0",
-    "shx": "^0.3.2",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-merge": "^4.2.2"
+    "@feathersjs/adapter-tests": "^4.5.2",
+    "@feathersjs/express": "^4.5.2",
+    "@feathersjs/feathers": "^4.5.2",
+    "@feathersjs/socketio": "^4.5.2",
+    "@types/node": "^13.11.1",
+    "mocha": "^7.1.1",
+    "shx": "^0.3.2"
   }
 }

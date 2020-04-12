@@ -1,9 +1,10 @@
-const assert = require('assert');
-const adapterTests = require('@feathersjs/adapter-tests');
-const errors = require('@feathersjs/errors');
-const feathers = require('@feathersjs/feathers');
+import assert from 'assert';
+import adapterTests from '@feathersjs/adapter-tests';
+import errors from '@feathersjs/errors';
+import feathers from '@feathersjs/feathers';
 
-const memory = require('../lib');
+import { memory } from '../src';
+
 const testSuite = adapterTests([
   '.options',
   '.events',
@@ -76,10 +77,6 @@ describe('Feathers Memory Service', () => {
     .use('/people-customid', memory({
       id: 'customid', events
     }));
-
-  it('is CommonJS compatible', () =>
-    assert.strictEqual(typeof require('../lib'), 'function')
-  );
 
   it('update with string id works', async () => {
     const people = app.service('people');
