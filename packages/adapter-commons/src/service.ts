@@ -98,9 +98,8 @@ export class AdapterService<T = any> implements ServiceMethods<T> {
   }
 
   create (data: Partial<T>, params?: Params): Promise<T>;
-
   create (data: Partial<T>[], params?: Params): Promise<T[]>;
-
+  create (data: Partial<T> | Partial<T>[], params?: Params): Promise<T | T[]>;
   create (data: Partial<T> | Partial<T>[], params?: Params): Promise<T | T[]> {
     if (Array.isArray(data) && !this.allowsMulti('create')) {
       return Promise.reject(new MethodNotAllowed(`Can not create multiple entries`));
@@ -120,9 +119,8 @@ export class AdapterService<T = any> implements ServiceMethods<T> {
   }
 
   patch (id: Id, data: Partial<T>, params?: Params): Promise<T>;
-
   patch (id: null, data: Partial<T>, params?: Params): Promise<T[]>;
-
+  patch (id: NullableId, data: Partial<T>, params?: Params): Promise<T | T[]>;
   patch (id: NullableId, data: Partial<T>, params?: Params): Promise<T | T[]> {
     if (id === null && !this.allowsMulti('patch')) {
       return Promise.reject(new MethodNotAllowed(`Can not patch multiple entries`));
@@ -132,9 +130,8 @@ export class AdapterService<T = any> implements ServiceMethods<T> {
   }
 
   remove (id: Id, params?: Params): Promise<T>;
-
   remove (id: null, params?: Params): Promise<T[]>;
-
+  remove (id: NullableId, params?: Params): Promise<T | T[]>;
   remove (id: NullableId, params?: Params): Promise<T | T[]> {
     if (id === null && !this.allowsMulti('remove')) {
       return Promise.reject(new MethodNotAllowed(`Can not remove multiple entries`));
