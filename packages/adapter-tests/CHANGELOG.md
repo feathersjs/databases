@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.5.3 (2020-09-24)
+
+
+### Bug Fixes
+
+* **adapter-tests:** Update multi patch + query tests ([#5](https://github.com/feathersjs/databases/issues/5)) ([84f1fe4](https://github.com/feathersjs/databases/commit/84f1fe4f13dc3a26891e43b965f75d08243f6c6f))
+
+
+
+
+
 ## [4.5.2](https://github.com/feathersjs/feathers/compare/v4.5.1...v4.5.2) (2020-03-04)
 
 **Note:** Version bump only for package @feathersjs/adapter-tests
