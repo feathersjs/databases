@@ -9,6 +9,10 @@
     "feathers",
     "feathers-plugin"
   ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/daffl"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -34,6 +38,15 @@
   "directories": {
     "lib": "lib"
   },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "src/**",
+    "lib/**",
+    "*.d.ts",
+    "*.js"
+  ],
   "dependencies": {
     "@feathersjs/adapter-commons": "^4.5.2",
     "@feathersjs/commons": "^4.5.2",
