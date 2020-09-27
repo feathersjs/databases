@@ -36,6 +36,13 @@
   "directories": {
     "lib": "lib"
   },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "src/**",
+    "lib/**"
+  ],
   "publishConfig": {
     "access": "public"
   },
