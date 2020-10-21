@@ -156,8 +156,6 @@ export class AdapterService<T = any> implements ServiceMethods<T> {
     }
   }
 
-  find (params: Params & { paginate: false }): Promise<T[]>;
-  find (params?: Params): Promise<Paginated<T>>;
   find (params?: Params): Promise<T[] | Paginated<T>> {
     return callMethod(this, '_find', params);
   }
