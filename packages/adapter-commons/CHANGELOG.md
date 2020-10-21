@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.5.5](https://github.com/feathersjs/databases/compare/@feathersjs/adapter-commons@4.5.4...@feathersjs/adapter-commons@4.5.5) (2020-10-21)
+
+
+### Bug Fixes
+
+* **typescript:** Revert "fix: add overloads for `find` ([#9](https://github.com/feathersjs/databases/issues/9))" ([85c20b2](https://github.com/feathersjs/databases/commit/85c20b267e67192169ded97dd5056f116a5ad7b5))
+
+
+
+
+
 ## [4.5.4](https://github.com/feathersjs/databases/compare/@feathersjs/adapter-commons@4.5.3...@feathersjs/adapter-commons@4.5.4) (2020-09-27)
 
 **Note:** Version bump only for package @feathersjs/adapter-commons
