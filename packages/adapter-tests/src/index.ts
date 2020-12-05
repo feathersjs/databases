@@ -3,7 +3,7 @@ import basicTests from './basic';
 import methodTests from './methods';
 import syntaxTests from './syntax';
 
-export default (testNames: string[]) => {
+const adapterTests = (testNames: string[]) => {
   return (app: any, errors: any, serviceName: any, idProp = 'id') => {
     if (!serviceName) {
       throw new Error('You must pass a service name');
@@ -45,3 +45,9 @@ export default (testNames: string[]) => {
     });
   };
 };
+
+export default adapterTests;
+
+if (typeof module !== 'undefined') {
+  module.exports = adapterTests;
+}

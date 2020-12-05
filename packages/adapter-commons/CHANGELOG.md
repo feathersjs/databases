@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.5.7](https://github.com/feathersjs/databases/compare/@feathersjs/adapter-commons@4.5.6...@feathersjs/adapter-commons@4.5.7) (2020-10-21)
+
+
+### Bug Fixes
+
+* **typescript:** Remove remaining overloads ([a29fabc](https://github.com/feathersjs/databases/commit/a29fabc9cf6050793a5e93948507ce3e19a235dd))
+
+
+
+
+
+## [4.5.6](https://github.com/feathersjs/databases/compare/@feathersjs/adapter-commons@4.5.5...@feathersjs/adapter-commons@4.5.6) (2020-10-21)
+
+
+### Bug Fixes
+
+* Revert "fix(adapter-commons): Add missing overloads ([#4](https://github.com/feathersjs/databases/issues/4))" ([dfaa850](https://github.com/feathersjs/databases/commit/dfaa8500644021f78d6234a79358f1b26ce2c8d3))
+
+
+
+
+
+## [4.5.5](https://github.com/feathersjs/databases/compare/@feathersjs/adapter-commons@4.5.4...@feathersjs/adapter-commons@4.5.5) (2020-10-21)
+
+
+### Bug Fixes
+
+* **typescript:** Revert "fix: add overloads for `find` ([#9](https://github.com/feathersjs/databases/issues/9))" ([85c20b2](https://github.com/feathersjs/databases/commit/85c20b267e67192169ded97dd5056f116a5ad7b5))
+
+
+
+
+
+## [4.5.4](https://github.com/feathersjs/databases/compare/@feathersjs/adapter-commons@4.5.3...@feathersjs/adapter-commons@4.5.4) (2020-09-27)
+
+**Note:** Version bump only for package @feathersjs/adapter-commons
+
+
+
+
+
+## 4.5.3 (2020-09-24)
+
+
+### Bug Fixes
+
+* add overloads for `find` ([#9](https://github.com/feathersjs/databases/issues/9)) ([87c7c29](https://github.com/feathersjs/databases/commit/87c7c29ef017b3cae135e7b7597a7e63fb7d0961))
+* **adapter-commons:** Add missing overloads ([#4](https://github.com/feathersjs/databases/issues/4)) ([b6c80ff](https://github.com/feathersjs/databases/commit/b6c80ff39a32c1b023178f06cffbcaa6d08c554d))
+* Improve Service typings for DB Common API ([#1](https://github.com/feathersjs/databases/issues/1)) ([fd3b949](https://github.com/feathersjs/databases/commit/fd3b9496b0a46f8fd9779c2603faeeb92bd1afc1))
+
+
+
+
+
 ## [4.5.2](https://github.com/feathersjs/feathers/compare/v4.5.1...v4.5.2) (2020-03-04)
 
 **Note:** Version bump only for package @feathersjs/adapter-commons

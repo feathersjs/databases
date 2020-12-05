@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.memory = exports.MemoryService = void 0;
 const errors_1 = require("@feathersjs/errors");
 const commons_1 = require("@feathersjs/commons");
 const adapter_commons_1 = require("@feathersjs/adapter-commons");

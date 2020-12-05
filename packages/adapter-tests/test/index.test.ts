@@ -1,4 +1,4 @@
-import assert from 'assert';
+import { strict as assert } from 'assert';
 import adapterTests from '../src';
 
 const testSuite = adapterTests([
@@ -68,5 +68,9 @@ const testSuite = adapterTests([
 describe('Feathers Memory Service', () => {
   it('loads the test suite', async () => {
     assert.ok(typeof testSuite === 'function');
+  });
+
+  it('exports as CommonJS', () => {
+    assert.equal(typeof require('../lib'), 'function');
   });
 });
